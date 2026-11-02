@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfboard Detail</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <div></div>
+        <div class="lang-switcher">
+            <button onclick="cambiarIdioma('es')">ESP</button> | 
+            <button onclick="cambiarIdioma('en')">ENG</button>
+        </div>
+    </header>
+
+    <main class="detalle-container">
+        <a href="index.html" id="btn-volver" class="btn-back">← Volver</a>
+        <h1 id="tabla-titulo"></h1>
+        <p id="tabla-medidas" class="medidas"></p>
+        <p id="tabla-descripcion"></p>
+        
+        <div class="fotos-grandes">
+            <img id="foto-frontal" src="" alt="Front View">
+            <img id="foto-trasera" src="" alt="Back View">
+        </div>
+    </main>
+
+    <script src="src/js/data.js"></script>
+    <script>
+        let idiomaActual = localStorage.getItem('idioma') || 'es';
+        const urlParams = new URLSearchParams(window.location.search);
+        const tablaId = urlParams.get('id');
+        const tabla = surfboards.find(t => t.id === tablaId);
+
+        function renderDetalle() {
+            if (!tabla) {
+                document.body.innerHTML = '<div class="detalle-container"><h1>Producto no encontrado / Product not found</h1><a href="index.html" class="btn-back">← Volver</a></div>';
+                return;
+            }
+            const info = tabla[idiomaActual];
+            document.getElementById('btn-volver').innerText = interfazUpt[idiomaActual].volver;
+            document.getElementById('tabla-titulo').innerText = info.titulo;
+            document.getElementById('tabla-descripcion').innerText = info.descripcion;
+            document.getElementById('tabla-medidas').innerText = `${interfazUpt[idiomaActual].dimensiones} ${tabla.medidas}`;
+            document.getElementById('foto-frontal').src = tabla.fotoFrontal;
+            document.getElementById('foto-trasera').src = tabla.fotoTrasera;
+        }
+
+        function cambiarIdioma(lang) {
+            localStorage.setItem('idioma', lang);
+            idiomaActual = lang;
+            renderDetalle();
+        }
+
+        renderDetalle();
+    </script>
+</body>
+</html>
