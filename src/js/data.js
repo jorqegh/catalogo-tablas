@@ -4,8 +4,8 @@ const surfboards = [
     id: "tabla-1",
     medidas: "5'4\" x 18 1/8\" x 2 1/4\" - 23.7L",
     fotoMiniatura: "src/img/tabla1_mini.jpg",
-    fotoFrontal: "src/img/tabla1_front.jpg",
-    fotoTrasera: "src/img/tabla1_back.jpg",
+    fotoFrontal: "src/img/tabla_sdy_front.jpg,
+    fotoTrasera: "src/img/tabla_sdy_back.jpg",
     es: { titulo: "Modelo SDY Pro", descripcion: "Una tabla rápida y reactiva, perfecta para exprimir cada ola." },
     en: { titulo: "SDY Pro Model", descripcion: "A fast and responsive board, perfect to maximize every single wave." }
   }
