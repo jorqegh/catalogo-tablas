@@ -15,8 +15,8 @@ const surfboards = [
     fotoMiniatura: "src/img/tabla_jfb_mini.jpg",
     fotoFrontal: "src/img/tabla_jfb_front.jpg",
     fotoTrasera: "src/img/tabla_jfb_back.jpg",
-    es: { titulo: "Modelo JFB Performance", descripcion: "Una tabla rápida y reactiva, perfecta para exprimir cada ola." },
-    en: { titulo: "JFB Performance Model", descripcion: "A fast and responsive board, perfect to maximize every single wave." }
+    es: { titulo: "Modelo JFB SuperSpeed", descripcion: "Una tabla rápida y reactiva, perfecta para exprimir cada ola." },
+    en: { titulo: "JFB SuperSpeed Model", descripcion: "A fast and responsive board, perfect to maximize every single wave." }
   }
 ];
 
