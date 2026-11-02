@@ -2,7 +2,7 @@
 const surfboards = [
   {
     id: "tabla-1",
-    medidas: "5'4\" x 18 1/8\" x 2 1/4\" - 23.7L",
+    medidas: "6'5\" x 18 1/4\" x 2 1/4\" - 29L",
     fotoMiniatura: "src/img/tabla1_mini.jpg",
     fotoFrontal: "src/img/tabla_sdy_front.jpg,
     fotoTrasera: "src/img/tabla_sdy_back.jpg",
