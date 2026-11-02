@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfboard Catalog</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Catálogo</h1>
+        <div class="lang-switcher">
+            <button onclick="cambiarIdioma('es')">ESP</button> | 
+            <button onclick="cambiarIdioma('en')">ENG</button>
+        </div>
+    </header>
+
+    <main id="catalogo-grid" class="grid"></main>
+
+    <script src="src/js/data.js"></script>
+    <script>
+        let idiomaActual = localStorage.getItem('idioma') || 'es';
+
+        function renderCatalogo() {
+            document.getElementById('main-title').innerText = idiomaActual === 'es' ? 'Mi Catálogo de Tablas' : 'My Surfboard Catalog';
+            const grid = document.getElementById('catalogo-grid');
+            grid.innerHTML = '';
+
+            surfboards.forEach(tabla => {
+                const info = tabla[idiomaActual];
+                grid.innerHTML += `
+                    <div class="card">
+                        <img src="${tabla.fotoMiniatura}" alt="${info.titulo}">
+                        <h3>${info.titulo}</h3>
+                        <a href="detalle.html?id=${tabla.id}" class="btn">${interfazUpt[idiomaActual].verDetalle}</a>
+                    </div>
+                `;
+            });
+        }
+
+        function cambiarIdioma(lang) {
+            localStorage.setItem('idioma', lang);
+            idiomaActual = lang;
+            renderCatalogo();
+        }
+
+        renderCatalogo();
+    </script>
+</body>
+</html>
