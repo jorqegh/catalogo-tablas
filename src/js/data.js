@@ -17,7 +17,16 @@ const surfboards = [
     fotoTrasera: "src/img/tabla_jfb_back.jpg",
     es: { titulo: "Modelo JFB SuperSpeed", descripcion: "Una tabla rápida y reactiva, perfecta para exprimir cada ola." },
     en: { titulo: "JFB SuperSpeed Model", descripcion: "A fast and responsive board, perfect to maximize every single wave." }
-  }
+  },
+ {
+    id: "tabla-3",
+    medidas: "5'8\" x 18 3/4\" x 2 5/16\" - 26L", // <-- Puedes cambiar estas medidas por las reales de esta tabla
+    fotoMiniatura: "src/img/tabla_almerrick_mini.jpg",
+    fotoFrontal: "src/img/tabla_almerrick_front.jpg",
+    fotoTrasera: "src/img/tabla_almerrick_back.jpg",
+    es: { titulo: "Modelo Al Merrick OG Flyer (Channel Islands) 3E Epoxy", descripcion: "Una shortboard híbrida de diario en 3E Epoxy que maximiza la velocidad y el planeo en olas pequeñas a medianas, manteniendo un pivote ultra reactivo para giros cerrados y verticales." },
+    en: { titulo: "Al Merrick OG Flyer (Channel Islands) 3E Epoxy Model", descripcion: "A hybrid everyday shortboard in 3E Epoxy that maximizes speed and planing in small to medium waves, maintaining an ultra-reactive pivot for tight, vertical turns." }
+  }    
 ];
 
 const interfazUpt = {
